@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Clock from './components/Clock.js';
 import Button from '@material-ui/core/Button';
-import TutorialTask from './components/TutorialTask.js';
+import HooksTask from './components/HooksTask.js';
 import Game from './components/Game';
+import GameHooks from './components/GameHooks';
 
 class App extends React.Component {
 
@@ -71,12 +72,12 @@ class App extends React.Component {
           <div>
             {userElement}
           </div>
-          <TutorialTask />
 
-          <div>
-            <Game />
-          </div>
+
         </header>
+        {/* <Game /> */}
+        <GameHooks/>
+        <HooksTask />
       </div>
     );
   }

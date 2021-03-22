@@ -1,7 +1,8 @@
 import React from 'react';
 import Board from './Board';
+import Button from '@material-ui/core/Button';
 
-class Game extends React.Component {
+export default class Game extends React.Component {
 
     constructor(props) {
         super(props);
@@ -45,11 +46,11 @@ class Game extends React.Component {
 
         const moves = history.map((step, move) => {
             const desc = move ?
-                'Go to move "#' + move :
+                'Go to move #' + move :
                 'Go to game start';
             return (
                 <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>{desc}</button>
+                    <Button color="secondary" onClick={() => this.jumpTo(move)}>{desc}</Button>
                 </li>
             );
         });
@@ -96,4 +97,3 @@ function calculateWinner(squares) {
     return null;
 }
 
-export default Game;
